@@ -43,6 +43,7 @@ mkdir -p /etc/portage/package.env/
 mkdir -p /etc/portage/package.unmask/
 mkdir -p /var/tmp/portage/vbslogs/
 
+touch /root/incus-gentoo-gh/container/etc/portage/make.conf.custom
 cp /root/incus-gentoo-gh/container/etc/portage/make.conf.custom.example /etc/portage/ || exit
 
 sleep 5
@@ -66,6 +67,8 @@ rm -rf /var/db/repos/gentoo/.git || return
 rm -f /var/db/repos/gentoo/.gitignore || return
 rm -f /var/db/repos/gentoo/.editorconfig || return
 emerge --sync || exit
+
+rm -f /etc/portage/make.conf.custom
 
 echo ""
 echo "!! At this point, check /etc/portage "
