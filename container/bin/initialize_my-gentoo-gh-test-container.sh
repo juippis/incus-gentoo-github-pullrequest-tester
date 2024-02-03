@@ -43,12 +43,12 @@ mkdir -p /etc/portage/package.env/
 mkdir -p /etc/portage/package.unmask/
 mkdir -p /var/tmp/portage/vbslogs/
 
-touch /etc/portage/make.conf.custom
+cp /root/incus-gentoo-gh/container/etc/portage/make.conf.custom.example /etc/portage/ || exit
 
 sleep 5
 
 echo ""
-echo "!! Modifying /root/.bashrc and /root/.profile to our needs."
+echo "!! Modifying /root/.bashrc and to our needs."
 echo ""
 
 echo "PATH=\"\$PATH:~/incus-gentoo-gh/container/bin\"" >> /root/.bashrc
