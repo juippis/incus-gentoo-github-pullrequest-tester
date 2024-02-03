@@ -1,0 +1,29 @@
+CFLAGS="-march=native -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
+
+EMERGE_DEFAULT_OPTS="--autounmask=y --autounmask-continue --autounmask-use=y --autounmask-write --binpkg-changed-deps=y --buildpkg-exclude virtual/* --buildpkg-exclude acct-* --buildpkg-exclude sys-kernel/* --complete-graph --nospinner --jobs=8 --usepkg"
+MAKEOPTS="-j16"
+FEATURES="-binpkg-request-signature binpkg-multi-instance buildpkg parallel-fetch parallel-install"
+
+# zstd is available in the @system set, and it's effective.
+BINPKG_COMPRESS="zstd"
+
+DISTDIR="/var/cache/distfiles"
+PORTAGE_SCHEDULING_POLICY="idle"
+PORTAGE_TMPDIR="/var/tmp"
+
+CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt sha sse sse2
+sse3 sse4_1 sse4_2 sse4a ssse3"
+
+INPUT_DEVICES="libinput"
+VIDEO_CARDS="amdgpu radeonsi"
+
+L10N="en en_US en-US fi sv"
+LINGUAS="${L10N}"
+
+PYTHON_SINGLE_TARGET="python3_11"
+PYTHON_TARGETS="pypy3 python3_10 python3_11 python3_12"
+
+USE="-consolekit dbus -doc elogind -examples -firmware -nls openrc -profile -systemd udev"
