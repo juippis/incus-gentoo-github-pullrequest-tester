@@ -1,0 +1,12 @@
+diff -Naur a/lib/_emerge/getloadavg.py b/lib/_emerge/getloadavg.py
+--- a/lib/_emerge/getloadavg.py	2022-11-12 08:51:01.187943979 +0200
++++ b/lib/_emerge/getloadavg.py	2022-11-12 08:52:01.056972566 +0200
+@@ -3,7 +3,7 @@
+ 
+ from portage import os
+ 
+-getloadavg = getattr(os, "getloadavg", None)
++getloadavg = None
+ if getloadavg is None:
+ 
+     def getloadavg():
