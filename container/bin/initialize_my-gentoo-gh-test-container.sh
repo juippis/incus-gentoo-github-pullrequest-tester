@@ -90,6 +90,6 @@ echo "     app-text/ansifilter dev-util/pkgcheck sys-kernel/gentoo-kernel-bin \\
 echo "     app-portage/pkg-testing-tool app-portage/iwdevtools net-misc/dhcp"
 echo ""
 echo "Continue reading: "
-echo "  TODO"
+echo "  https://wiki.gentoo.org/wiki/Incus/Gentoo_Github_pullrequest_testing"
 echo ""
 
