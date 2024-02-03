@@ -1,0 +1,22 @@
+# Optional examples of what you can do, try to avoid filling this file too 
+# much, and only control what you have installed, or to get past popular 
+# REQUIRED_USE constraints.
+#
+# Useful defaults.
+app-editors/vim -X -gpm -python
+app-portage/pfl -network-cron
+dev-cpp/gtkmm X
+dev-lang/mono minimal
+dev-lang/perl ithreads
+dev-lang/python sqlite ssl xml
+dev-python/pypy3 sqlite
+dev-util/pkgcheck network
+dev-vcs/git -perl -python -webdav
+media-libs/libcanberra alsa udev
+net-libs/webkit-gtk X
+net-misc/asterisk -blocks
+sci-libs/pcl usb
+sys-apps/portage -gentoo-dev -rsync-verify
+sys-kernel/gentoo-kernel-bin -initramfs
+x11-base/xorg-server xvfb
+
