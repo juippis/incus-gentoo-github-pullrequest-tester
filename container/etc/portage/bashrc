@@ -9,6 +9,6 @@ post_pkg_preinst() {
 }
 
 post_pkg_postinst() {
-	qa-vdb_post_pkg_postinst
 	qa-openrc_post_pkg_preinst
+	qa-vdb_post_pkg_postinst
 }
