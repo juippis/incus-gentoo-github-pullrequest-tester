@@ -1,0 +1,2 @@
+# Mask systemd globally on openrc containers.
+*/* systemd
