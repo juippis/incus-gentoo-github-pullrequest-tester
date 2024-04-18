@@ -1,0 +1,2 @@
+# Mask package-specific troublesome use flags
+net-misc/asterisk blocks # requires clang
