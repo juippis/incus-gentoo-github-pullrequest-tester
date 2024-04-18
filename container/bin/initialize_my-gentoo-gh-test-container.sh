@@ -64,10 +64,7 @@ echo ""
 
 sleep 5
 
-rm -r /var/db/repos/gentoo/* || exit
-rm -rf /var/db/repos/gentoo/.git || return
-rm -f /var/db/repos/gentoo/.gitignore || return
-rm -f /var/db/repos/gentoo/.editorconfig || return
+rm -rf /var/db/repos/gentoo/ || exit
 emerge --sync || exit
 
 rm -f /etc/portage/make.conf.custom
