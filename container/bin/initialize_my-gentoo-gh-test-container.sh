@@ -38,7 +38,7 @@ ln -s /root/incus-gentoo-gh/container/etc/portage/make.conf /etc/portage/make.co
 ln -s /root/incus-gentoo-gh/container/etc/portage/package.accept_keywords/ /etc/portage/package.accept_keywords
 ln -s /root/incus-gentoo-gh/container/etc/portage/package.mask/ /etc/portage/package.mask
 ln -s /root/incus-gentoo-gh/container/etc/portage/package.use/ /etc/portage/package.use
-ln -s /root/incus-gentoo-gh/container/etc/portage/profile/package.use.mask/ /etc/portage/profile/package.use.mask/
+ln -s /root/incus-gentoo-gh/container/etc/portage/profile/package.use.mask/ /etc/portage/profile/package.use.mask
 ln -s /root/incus-gentoo-gh/container/etc/portage/repos.conf/ /etc/portage/repos.conf
 
 mkdir -p /etc/portage/package.env/
