@@ -1,0 +1,9 @@
+# Global troublesome use flags
+*/* bootstrap
+*/* build
+*/* debug
+*/* libcxx
+*/* modules-sign
+*/* secureboot
+*/* selinux
+dev-haskell/* profile
