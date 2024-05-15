@@ -57,7 +57,7 @@ main() {
 
 	elif [[ "${run}" == 1 ]]; then
 		echo "INFO: -1 invoked - doing a single test-run."
-		incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(sleep 10 && sed -i -e 's/--max-use-combinations 6/--max-use-combinations 1/g' /root/incus-gentoo-gh/container/bin/gentoo-gh-prtester.sh)"
+		incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(sleep 10 && sed -i -e 's/--max-use-combinations 6/--max-use-combinations 0/g' /root/incus-gentoo-gh/container/bin/gentoo-gh-prtester.sh)"
 		incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(sleep 10 && ~/incus-gentoo-gh/container/bin/gentoo-gh-prtester.sh)"
 		incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(~/incus-gentoo-gh/container/bin/gentoo_pkg_errors_and_qa_notices.sh)"
 		incus exec my-gentoo-gh-test-container-snap-"${prId}" bash
