@@ -1,0 +1,21 @@
+diff -Naur a/pkg_testing_tools/use.py b/pkg_testing_tools/use.py
+--- a/pkg_testing_tools/use.py	2024-04-19 17:40:36.000000000 +0300
++++ b/pkg_testing_tools/use.py	2024-05-15 14:57:21.000715369 +0300
+@@ -55,13 +55,13 @@
+         "l10n_",
+         "kernel_",
+         "abi_",
+-        # "python_target_",
+-        # "python_targets_",
+-        # "ruby_targets_",
++        "python_target_",
++        "python_targets_",
++        "ruby_targets_",
+         "cpu_flags_",
+     )
+ 
+-    ignore_flags = set(["debug", "doc", "test", "selinux", "split-usr", "pic"])
++    ignore_flags = set(["debug", "test", "selinux", "split-usr", "pic"])
+ 
+     # some flags that *most* likely we shouldn't shuffle and test.
+     for flag in flags:
