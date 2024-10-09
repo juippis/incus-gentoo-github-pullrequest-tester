@@ -7,7 +7,6 @@ app-editors/vim -X -gpm -python
 app-portage/pfl -network-cron
 dev-cpp/gtkmm X
 dev-lang/mono minimal
-dev-lang/perl ithreads
 dev-lang/python sqlite ssl xml
 dev-python/pypy3 sqlite
 dev-python/pypy3_10 sqlite
