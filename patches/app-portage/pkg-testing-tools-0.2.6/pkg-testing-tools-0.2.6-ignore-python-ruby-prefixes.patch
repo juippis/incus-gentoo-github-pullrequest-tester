@@ -1,0 +1,21 @@
+diff '--color=auto' -Naur a/pkg_testing_tools/use.py b/pkg_testing_tools/use.py
+--- a/pkg_testing_tools/use.py	2024-12-04 21:20:31.000000000 +0200
++++ b/pkg_testing_tools/use.py	2024-12-11 18:35:53.038842299 +0200
+@@ -56,13 +56,13 @@
+         "l10n_",
+         "linguas_",
+         "perl_features_",
+-        # "python_target_",
+-        # "python_targets_",
+-        # "ruby_targets_",
++        "python_target_",
++        "python_targets_",
++        "ruby_targets_",
+         "video_cards_",
+     )
+ 
+-    ignore_flags = set(["debug", "doc", "test", "selinux", "split-usr", "pic"])
++    ignore_flags = set(["debug", "test", "selinux", "split-usr", "pic"])
+ 
+     # some flags that *most* likely we shouldn't shuffle and test.
+     for flag in flags:
