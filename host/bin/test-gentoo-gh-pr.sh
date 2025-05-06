@@ -47,7 +47,8 @@ main() {
 	echo "Initializing new test environment... this will take a while."
 	incus copy my-gentoo-gh-test-container my-gentoo-gh-test-container-snap-"${prId}"
 	incus start my-gentoo-gh-test-container-snap-"${prId}"
-	incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(sleep 10 && cd /var/db/repos/gentoo && curl -s -L https://patch-diff.githubusercontent.com/raw/gentoo/gentoo/pull/${prId}.patch | git -c user.email=my@email -c user.name=MyName am --keep-cr -3)"
+	incus exec my-gentoo-gh-test-container-snap-"${prId}" -- su -lc "(sleep 10 && cd /var/db/repos/gentoo && ~/incus-gentoo-gh/container/bin/fullget-gentooghpr.sh ${prId})"
+	wait
 
 	if [[ -z "${run}" ]]; then
 		echo "INFO: Doing the default test runs."
