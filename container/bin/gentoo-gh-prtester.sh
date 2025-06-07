@@ -18,7 +18,7 @@ if [[ -z "$(git rev-list origin/HEAD..HEAD)" ]]; then
 fi
 
 candidates="$(git show --name-only --diff-filter=AMR --format=tformat: \
-	origin/HEAD..HEAD | sort -u | grep ebuild)"
+	origin/HEAD..HEAD | sort -u | grep '\.ebuild$')"
 pkgstobetested=()
 for ebuild in ${candidates}; do
 	[[ -f "${ebuild}" ]] && pkgstobetested+=("${ebuild}")
