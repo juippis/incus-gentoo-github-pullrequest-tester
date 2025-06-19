@@ -1,2 +1,3 @@
 # Mask package-specific troublesome use flags
 net-misc/asterisk blocks # requires clang
+sys-apps/s6-linux-init sysv-utils # conflicts with openrc[sysvinit]
