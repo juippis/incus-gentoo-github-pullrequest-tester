@@ -17,12 +17,6 @@
 #   test-gentoo-gh-pr.sh 12345
 #
 
-if [[ -z ${1} ]]; then
-	echo "Please insert a GitHub PR number!"
-	echo "https://github.com/gentoo/gentoo/pull/<this_one>"
-	exit
-fi
-
 main() {
 	local run=""
 	local prId=""
@@ -31,18 +25,26 @@ main() {
 		case ${1} in
 			-1)
 				run="1"
-				prId="${2}"
 				;;
 			-i)
 				run="i"
-				prId="${2}"
 				;;
 			*)
+				if [[ -n "${prId}" ]]; then
+					echo "${0}: only a single PR can be specified" >&2
+					exit 1
+				fi
 				prId="${1}"
 				;;
 		esac
 		shift
 	done
+
+	if [[ -z "${prId}" ]]; then
+		echo "Please insert a GitHub PR number!"
+		echo "https://github.com/gentoo/gentoo/pull/<this_one>"
+		exit 1
+	fi
 
 	echo "Initializing new test environment... this will take a while."
 	incus copy my-gentoo-gh-test-container my-gentoo-gh-test-container-snap-"${prId}"
