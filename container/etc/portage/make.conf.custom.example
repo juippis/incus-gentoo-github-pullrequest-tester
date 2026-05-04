@@ -3,7 +3,7 @@ CXXFLAGS="${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"
 
-EMERGE_DEFAULT_OPTS="--autounmask=y --autounmask-continue --autounmask-use=y --autounmask-write --binpkg-changed-deps=y --buildpkg-exclude virtual/* --buildpkg-exclude acct-* --buildpkg-exclude sys-kernel/* --complete-graph --nospinner --jobs=8 --usepkg"
+EMERGE_DEFAULT_OPTS="--autounmask=y --autounmask-continue --autounmask-use=y --autounmask-write --binpkg-changed-deps=y --buildpkg-exclude virtual/* --buildpkg-exclude acct-* --buildpkg-exclude sys-kernel/* --complete-graph --nospinner --jobs=8 --quiet-build --usepkg"
 MAKEOPTS="-j16"
 FEATURES="-binpkg-request-signature binpkg-multi-instance buildpkg parallel-fetch parallel-install"
 
