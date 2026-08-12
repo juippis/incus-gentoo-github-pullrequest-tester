@@ -26,3 +26,7 @@ PYTHON_SINGLE_TARGET="python3_14"
 PYTHON_TARGETS="python3_12 python3_13 python3_14"
 
 USE="-consolekit dbus -doc elogind -examples -firmware -nls openrc -profile -systemd udev"
+
+## dev-build/steve
+# NINJAOPTS=""
+# MAKEFLAGS="--jobserver-auth=fifo:/dev/steve"
