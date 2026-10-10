@@ -22,8 +22,8 @@ VIDEO_CARDS="amdgpu radeonsi"
 L10N="en en_US en-US fi sv"
 LINGUAS="${L10N}"
 
-PYTHON_SINGLE_TARGET="python3_14"
-PYTHON_TARGETS="python3_12 python3_13 python3_14"
+# PYTHON_SINGLE_TARGET="python3_14"
+PYTHON_TARGETS="python3_12 python3_13 python3_14 python3_15"
 
 USE="-consolekit dbus -doc elogind -examples -firmware -nls openrc -profile -systemd udev"
 
